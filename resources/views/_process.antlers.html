@@ -1,0 +1,36 @@
+{{ service }}
+<div class="bg-gray-50">
+    <div class="mx-auto max-w-7xl mb-12 px-4 sm:px-6 lg:px-8">
+        {{ process }}
+
+        <h2 class="mb-4 font-bold tracking-tight text-4xl xl:text-6xl">
+            <span class="block"> {{ title }} </span>
+        </h2>
+
+        <div class="w-12">
+            <div class="mt-4 mb-4 w-20 h-1.5 bg-pink-500"></div>
+        </div>
+
+        <p class="mt-6 mb-12 text-lg font-medium leading-6 text-gray-900">
+            {{ content }}
+        </p>
+
+        <div class="mb-4 grid grid-cols-1 gap-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-4">
+            {{ items }}
+                <div>
+                    <div class="flex h-12 w-12 mb-8 items-center justify-center rounded-full bg-pink-500 text-white">
+                       {{ icon }}
+                    </div>
+
+                    <p class="text-lg font-bold mb-2 mt-4">{{ title }}</p>
+
+                    <p class="text-gray-500">
+                        {{ content }}
+                    </p>
+                </div>
+            {{ /items }}
+        </div>
+        {{ /process }}
+    </div>
+</div>
+{{ /service }}

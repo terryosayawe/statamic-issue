@@ -1,0 +1,34 @@
+{{ hero }}
+<div class="bg-hero-pattern bg-opacity-100 bg-cover bg-no-repeat pt-10 sm:pt-12 sm:pb-12 lg:overflow-hidden md:pb-0 md:pt-16 lg:pt-8 lg:pb-8">
+    <div class="mx-auto max-w-7xl lg:px-8">
+        <div class="text-center">
+            <div class="px-4 py-16 sm:px-6 sm:py-24 lg:py-24 lg:px-8">
+                <h1 class="mt-4 mb-4 md:text-4xl font-bold tracking-tight text-white sm:mt-5 text-4xl sm:text-3xl lg:mt-6 xl:text-6xl">
+                    <span class="block"> {{ title }}</span>
+                </h1>
+                {{ if content }}
+                    <p class="text-base md:text-lg text-white sm:text-xl lg:text-lg xl:text-2xl">
+                        {{ content }}
+                    </p>
+                {{ /if }}
+                {{ if cta }}
+                <div class="mt-10 md:pb-16 sm:mt-12 pb-8 w-full">
+                    <a href="/contact-us" class="rounded-md border-2 border-white bg-transparent px-12 md:px-16 lg:px-24 py-3 text-base font-medium text-white shadow-sm">
+                        {{ cta }}
+                    </a>
+                </div>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ /hero }}
+
+<!-- IT -->
+<div class="bg-pink-800 text-white">
+    <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-12">
+        <p class="text-base lg:text-lg">
+            {{ beyound }}
+        </p>
+    </div>
+</div>

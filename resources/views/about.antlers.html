@@ -1,0 +1,126 @@
+<main>
+    <div class="bg-gray-50">
+        <!-- Hero card -->
+        {{ partial:hero }}
+
+        <!-- Who we are -->
+        {{ talk_to_us }}
+        <div class="bg-white text-base">
+            <div class="lg:float-right px-4 lg:px-0 max-w-7xl lg:max-w-[85%] grid grid-cols-1 gap-8 md:gap-4 md:grid md:grid-cols-4 py-12 md:py-16 lg:py-16">
+                <div class="md:col-span-2">
+                    <h2 class="text-3xl mt-2 font-bold tracking-tight">
+                        {{ title }}
+                    </h2>
+                    <div class="mt-4 mb-4 w-20 h-1.5 bg-pink-500"></div>
+                    <p class="text-lg text-justify leading-6">
+                        {{ p1 }}
+                    </p>
+                    <p class="text-lg text-justify leading-6 mt-4">
+                        {{ p2 }}
+                    </p>
+                    <div class="mt-12 flex">
+                        <a href="/contact-us" class="inline-flex items-center justify-center rounded-md border-2 border-pink-500 bg-white px-12 md:px-16 lg:px-24 py-3 text-base font-medium text-pink-500 shadow-sm">
+                            {{ cta }}
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-2 md:relative md:h-[20rem] lg:h-[30rem] overflow-hidden w-full">
+                    <span class="md:absolute right-0">
+                        <img class="object-cover w-full md:w-[24rem] lg:w-[710px] h-auto" src="{{ image1 }}" alt="who are we" />
+                    </span>
+                </div>
+            </div>
+            <p class="clear-both"></p>
+        </div>
+        {{ /talk_to_us }}
+
+
+        <!-- Mission & Vission -->
+        {{ company:mission }}
+        <div class="bg-white text-base">
+            <div class="relative px-4 mx-auto max-w-7xl grid grid-cols-1 gap-1 md:gap-8 md:grid md:grid-cols-4 py-12 md:py-16 lg:py-16">
+                <div class="md:col-span-2">
+                    <h2 class="text-3xl mt-0 font-bold tracking-tight">
+                        {{ mission_title }}
+                    </h2>
+                    <div class="mt-4 mb-4 w-20 h-1.5 bg-pink-500"></div>
+                    <p class="text-lg leading-6">
+                        {{ mission_text }}
+                    </p>
+                    <h2 class="text-3xl mt-8 font-bold tracking-tight">
+                        {{ vision_title }}
+                    </h2>
+                    <div class="mt-4 mb-4 w-20 h-1.5 bg-pink-500"></div>
+                    <p class="text-lg leading-6 mt-8 lg:mb-24">
+                        {{ vision_text }}
+                    </p>
+                </div>
+                <div class="md:col-span-2 md:h-[24rem] lg:h-[30rem] h-auto">
+                    <div class="h-[30rem] md:h-[24rem] h-auto">
+                        <img class="absolute object-contain right-4 md:top-0 md:right-8 w-[20rem] h-[20rem] md:w-[17.125rem] md:h-[16rem] lg:w-[27.125rem] lg:h-[24rem]" src="{{ image_bottom }}" alt="coding laptop" />
+                        <img class="absolute object-contain right-20 md:top-4 md:right-40 mt-16 md:ml-30 w-[20rem] h-[20rem] md:w-[14rem] md:h-[14rem] lg:w-[24rem] lg:h-[24rem]" src="{{ image_middle}}" alt="rubic" />
+                        <img class="absolute object-contain right-1 md:top-12 md:right-12 mt-60 md:mt-40 md:ml-32 w-[17.75rem] h-[16.5rem]" src="{{ image_top }}" alt="team effort" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ /company:mission }}
+
+
+        <!-- Commitment -->
+        {{ company:commitments }}
+        <div class="bg-white text-base">
+            <div class="float-left px-4 lg:px-0 max-w-7xl lg:max-w-[85%] grid grid-cols-1 gap-1 md:gap-2 lg:gap-8 md:grid md:grid-cols-4 py-12 md:pt-16 md:pb-4 lg:pt-16 lg:pb-0">
+                <div class="md:col-span-2 md:relative overflow-hidden w-full md:h-[18rem] lg:h-[30rem] h-auto">
+                    <span class="md:absolute top-0 left-0">
+                        <img class="object-cover w-full h-auto md:w-[20rem] lg:w-[710px]" src="{{ image }}" alt="our commitments" />
+                    </span>
+                </div>
+                <div class="col-span-2 md:py-0 lg:py-4">
+                    <h2 class="text-3xl mt-2 lg:mt-10 font-bold tracking-tight">
+                        {{ title }}
+                    </h2>
+                    <div class="mt-4 mb-4 w-20 h-1.5 bg-pink-500"></div>
+                    <p class="text-lg leading-6 text-justify">
+                        {{ content }}
+                    </p>
+                </div>
+            </div>
+            <p class="clear-both"></p>
+        </div>
+        {{ /company:commitments }}
+
+        <!-- Team -->
+        {{ company:team }}
+        <div class="bg-white">
+            <div class="mx-auto max-w-7xl py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+                <div class="space-y-8 sm:space-y-12">
+                    <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
+                        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">{{ title }}</h2>
+                        <div class="mx-auto mt-4 mb-4 w-20 h-1.5 bg-pink-500"></div>
+                        <p class="text-xl text-base">
+                            {{ content }}
+                        </p>
+                    </div>
+                    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-4">
+                        {{ people }}
+                        <li>
+                            <div class="space-y-4">
+                                <img class="mx-auto h-20 w-20 rounded-full lg:h-24 lg:w-24" src="{{ photo }}" alt="{{ name }}">
+                                <div class="space-y-2">
+                                    <div class="text-xs font-medium lg:text-sm">
+                                        <h3 class="font-bold text-lg">{{ name }}</h3>
+                                        <p class="text-gray-500">{{ position }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {{ /people }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{ /company:team }}
+    </div>
+</main>
+

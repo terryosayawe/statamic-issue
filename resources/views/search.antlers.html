@@ -1,0 +1,24 @@
+<div class="overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 lg:py-24" x-data="{ open: true }">
+    <div class="relative mx-auto max-w-xl">
+
+        <div class="text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                {{ title }} for "{{ get:q }}"
+            </h2>
+        </div>
+
+        <div class="mt-12">
+            {{ search:results as="results" }}
+            {{ if results }}
+            <ul role="list" class="space-y-4">
+                {{ results }}
+                <li class="px-4 py-4 sm:px-0">
+                    <a href="{{ url }}" class="font-bold hover:text-orient-600">{{ title }}</a>
+                </li>
+                {{ /results }}
+            </ul>
+            {{ /if }}
+            {{ /search:results }}
+        </div>
+    </div>
+</div>

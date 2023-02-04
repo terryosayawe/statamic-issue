@@ -1,0 +1,180 @@
+<main>
+    <div>
+        <!-- Hero card -->
+        {{ partial:hero }}
+
+        <!-- Services -->
+        <div class="bg-gray-50">
+            <div class="mx-auto max-w-5xl py-16 px-4 sm:px-6 lg:px-8">
+                {{ services }}
+
+                <h2 class="text-center mt-4 mb-4 font-bold tracking-tight sm:mt-5 text-4xl lg:mt-6 xl:text-6xl">
+                    <span class="block"> {{ title }} </span>
+                </h2>
+
+                <div class="mx-auto w-12">
+                    <div class="mt-4 mb-4 w-20 h-1.5 bg-pink-500"></div>
+                </div>
+
+                <p class="mt-6 mb-12 text-center text-lg font-medium leading-6 text-gray-900">
+                    {{ content }}
+                </p>
+
+                <div class="grid grid-cols-1 gap-8 md:grid md:grid-cols-2 pt-12">
+                    {{ item }}
+                    <div class="shadow-xl p-6 rounded-lg mb-6 bg-white hover:bg-gray-100">
+                        <img class="py-4 h-16" src="{{ icon }}" alt="service icon" />
+                        <h2 class="text-4xl mb-8 mt-4">{{ title }}</h2>
+                        <p class="mb-6 text-gray-500">
+                            {{ content }}
+                        </p>
+                        <a href="/services" class="inline-flex items-center py-2 text-lg font-medium mt-2 uppercase text-center text-pink-500">
+                            More Detail <img class="ml-2 -mr-1 w-4 h-4" src="{{ siteicons:arrow }}" alt="arrow" />
+                        </a>
+                    </div>
+                    {{ /item }}
+                </div>
+                {{ /services }}
+            </div>
+        </div>
+
+        <!-- Talk to us -->
+        {{ talk_to_us }}
+        <div class="bg-talk-to bg-center bg-cover bg-no-repeat text-white">
+            <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 md:py-16 lg:px-8 lg:py-20">
+                <h2 class="text-3xl font-bold tracking-tight mb-8">
+                     {{ title }}
+                </h2>
+                <p class="text-lg leading-6">
+                    {{ p1 }}
+                </p>
+                <p class="text-lg leading-6 mt-4">
+                    {{ p2 }}
+                </p>
+                <div class="mt-12 flex">
+                    <div class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex items-center justify-center rounded-md border border-transparent bg-pink-500 text-base font-medium text-white shadow-sm hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2">
+                        <a href="/contact-us" class="inline-flex items-center justify-center rounded-md border border-transparent bg-pink-500 px-12 py-3 text-base font-medium text-white">
+                            {{ cta }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ /talk_to_us }}
+
+        <!-- Technology -->
+        {{ technology }}
+        <div class="bg-gray-50">
+            <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 md:py-16 lg:px-8 lg:py-20">
+                <h2 class="text-left mb-4 font-bold tracking-tight sm:mt-5 text-4xl xl:text-6xl">
+                    <span class="block">
+                        {{ title}}
+                    </span>
+                </h2>
+                <div class="mt-4 mb-4 w-20 h-1.5 bg-pink-500"></div>
+                <p class="text-lg leading-6 mb-8">
+                     {{ content }}
+                </p>
+
+                <div class="grid md:grid-cols-3 md:gap-2 lg:grid-cols-4 grid-cols-1 lg:gap-4 pt-12">
+                    {{ tools }}
+                    <div class="relative shadow-md mx-auto w-full lg:w-64 lg:h-36 rounded-sm p-6 mb-4 bg-white hover:bg-gray-100">
+                        <a href="{{ link }}">
+                            <div class="lg:pt-8 pt-3 font-bold text-base mx-auto w-full text-center">
+                                {{ name }}
+                            </div>
+
+                            <div class="absolute bottom-1 right-1">
+                                <a href="{{ link }}">
+                                    <img src="{{ siteicons:down_arrow }}" alt="arrow down icon" />
+                                </a>
+                            </div>
+                        </a>
+                    </div>
+                    {{ /tools }}
+                </div>
+            </div>
+        </div>
+        {{ /technology }}
+
+        <!-- Client work -->
+        {{ our_work }}
+        <div class="bg-client-work bg-center bg-cover bg-no-repeat text-white">
+            <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 md:py-16 lg:px-8 lg:py-20">
+                <h2 class="text-4xl xl:text-6xl font-bold tracking-tight mb-12">
+                    {{ title }}
+                </h2>
+
+                <div class="mt-2 mb-12 w-full h-0.5 bg-white"></div>
+
+                <div class="pt-4">
+                    {{ apps }}
+                    <div class="flex flex-col lg:flex-row sm:mb-6">
+                        <div class="mb-4 lg:mb-12">
+                            <img class="rounded-lg object-cover" src="{{ image }}" alt="{{ title }}" />
+                        </div>
+                        <div class="lg:px-8">
+                            <h3 class="text-3xl font-bold tracking-tight mb-8">
+                                {{ name }}
+                            </h3>
+                            <div class="text-base mb-8">
+                                {{ description }}
+                            </div>
+                        </div>
+                    </div>
+                    {{ /apps }}
+                </div>
+
+                <div class="mb-2 w-full mx-auto w-8 bg-gray-300 rounded-full p-2">
+                    <img src="{{ siteicons:arrow_down }}" alt="{{ siteicons:arrow_down:alt}}" />
+                </div>
+            </div>
+        </div>
+        {{ /our_work }}
+
+        <!-- What our customers say -->
+        {{ testimonial }}
+        <div class="bg-white">
+            <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 md:py-16 lg:px-8 lg:py-20">
+                <h2 class="text-4xl text-center xl:text-6xl font-bold tracking-tight mb-6">
+                    {{ title }}
+                </h2>
+
+                <div class="mt-4 mb-4 mx-auto w-20 h-1.5 bg-pink-500"></div>
+
+                <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-8 pt-12">
+                    {{ testimonies }}
+                    <div class="shadow-xl p-6 rounded-lg mb-6 bg-white hover:bg-gray-100">
+                        <div class="relative text-lg font-medium text-white md:flex-grow p-6">
+                            <svg class="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-gray-900" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                            </svg>
+                            <p class="pl-2 text-gray-500 leading-lg">
+                                {{ text }}
+                            </p>
+
+                            <footer class="mt-8">
+                                <div class="flex items-start">
+                                    <div class="inline-flex flex-shrink-0 rounded-full border-2 border-white">
+                                        <img class="h-12 w-12 rounded-full" src="{{ avatar }}?ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                    </div>
+                                    <div class="ml-4">
+                                        <div class="text-base font-bold text-gray-900">{{ given_by }}</div>
+                                        <div class="text-base font-bold text-gray-900">{{ position }}</div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                    {{ /testimonies }}
+                </div>
+            </div>
+        </div>
+        {{ /testimonial }}
+
+        <!-- Contact Us -->
+        {{ partial:contactus }}
+
+    </div>
+</main>
+

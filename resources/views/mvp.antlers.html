@@ -1,0 +1,37 @@
+<main class="bg-gray-50">
+    <!-- Hero card -->
+    {{ partial:hero }}
+
+    {{ mvp }}
+    <div class="bg-white py-24 sm:py-24 lg:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            {{ define }}
+            <div class="sm:text-center">
+                <p class="mt-2 font-bold tracking-tight text-gray-900 md:text-4xl text-4xl sm:text-3xl xl:text-6xl">{{ what }}</p>
+                <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">{{ p1 }} </p>
+            </div>
+
+            <div class="mt-20 max-w-lg sm:mx-auto md:max-w-none">
+                <div class="grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
+                {{ items }}
+                    <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-pink-500 text-white sm:shrink-0">
+                            {{ svg }}
+                        </div>
+                        <div class="sm:min-w-0 sm:flex-1">
+                            <p class="text-lg font-semibold leading-8 text-gray-900">{{ title }}</p>
+                            <p class="mt-2 text-base leading-7 text-gray-600">
+                               {{ content }}
+                            </p>
+                        </div>
+                    </div>
+                {{ /items }}
+                </div>
+            </div>
+            {{ /define }}
+        </div>
+    </div>
+    {{ /mvp }}
+
+    {{ partial:contactus }}
+</main>

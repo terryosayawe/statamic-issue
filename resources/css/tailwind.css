@@ -1,0 +1,11 @@
+@tailwind base;
+@import "site";
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    font-family: Helvetica, Helvetica Neue;
+  }
+}

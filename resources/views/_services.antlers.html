@@ -1,0 +1,31 @@
+{{ service }}
+<div class="bg-gray-50">
+    <div class="mx-auto max-w-7xl py-12 px-4 sm:py-16 sm:mb-12 sm:px-6 lg:px-8">
+        {{ services }}
+
+        <h2 class="mt-4 mb-4 font-bold tracking-tight sm:mt-5 text-3xl lg:mt-6 xl:text-6xl">
+            <span class="block"> {{ title }} </span>
+        </h2>
+
+        <div class="w-12">
+            <div class="mt-4 mb-4 w-20 h-1.5 bg-pink-500"></div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 pt-12">
+            {{ items }}
+            <div class="shadow-xl p-6 rounded-lg mb-6 bg-white hover:bg-gray-100">
+                <img class="py-4 h-16" src="{{ icon }}" alt="service icon" />
+                <h2 class="text-3xl mb-8 mt-4">{{ title }}</h2>
+                <p class="mb-6 text-gray-500">
+                    {{ content }}
+                </p>
+                <a href="/contact-us" class="inline-flex items-center py-2 text-lg font-medium mt-2 uppercase text-center text-base">
+                    Get Started <img class="ml-2 -mr-1 w-4 h-4" src="{{ siteicons:arrow_black }}" alt="arrow" />
+                </a>
+            </div>
+            {{ /items }}
+        </div>
+        {{ /services }}
+    </div>
+</div>
+{{ /service }}

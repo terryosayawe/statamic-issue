@@ -1,0 +1,9 @@
+{{ fields }}
+    <div class="sm:col-span-2">
+        <label for="{{ display }}" class="block text-sm font-medium text-gray-700">{{ display }}</label>
+        <div class="mt-1">{{ field }}</div>
+        {{ if error }}
+            <p class="text-gray-500 text-sm">{{ error }}</p>
+        {{ /if }}
+    </div>
+{{ /fields }}

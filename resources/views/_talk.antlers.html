@@ -1,0 +1,42 @@
+{{ contactfaq:get_in_touch }}
+<div class="bg-gray-200">
+    <div class="mx-auto max-w-7xl py-4 px-4 sm:px-6 md:py-8 lg:px-8 lg:py-8">
+        <h2 class="text-4xl xl:text-6xl font-bold tracking-tight mb-6">
+            {{ title }}
+        </h2>
+
+        <div class="mt-4 mb-4 w-20 h-1.5 bg-pink-500"></div>
+
+        {{ details }}
+        <div class="grid xl:grid-cols-2 grid-cols-1 xl:max-w-3/6 w-full xl:gap-8 pt-4">
+            <div>
+                <p class="text-base leading-lg mb-4">
+                    {{ p1 }}
+                </p>
+
+                <div class="flex flex-col">
+                    <h6 class="font-bold mb-4">{{ sub_heading }}</h6>
+                    {{ contact }}
+                    <div class="flex mb-2">
+                                 <span class="flex-shrink-0 pt-1.5">
+                                       <img src="{{ icon }}" alt="icon" />
+                                </span>
+                        <span class="pl-2">{{ text }}</span>
+                    </div>
+                    {{ /contact }}
+                    <div class="md:max-w-4/5 w-full pt-8">
+                        <img class="object-cover rounded-lg" src="https://10guru.fra1.cdn.digitaloceanspaces.com/assets/pages/contact-us-2.jpg" alt="Developers image" />
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="xl:py-4 xl:px-12">
+                    {{ partial:form }}
+                </div>
+            </div>
+        </div>
+        {{ /details }}
+    </div>
+</div>
+{{ /contactfaq:get_in_touch }}

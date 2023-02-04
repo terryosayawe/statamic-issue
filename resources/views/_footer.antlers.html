@@ -1,0 +1,83 @@
+<footer class="bg-pink-500 text-white" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+            <div class="space-y-8 xl:col-span-1">
+                {{ footer:logo }}
+                <p class="text-base">
+                    {{ footer:mission }}
+                </p>
+                <div class="flex space-x-6">
+                    {{ footer:social }}
+                        <a href="{{ url }}" target="_blank">{{ icon }}</a>
+                    {{ /footer:social }}
+                </div>
+            </div>
+            <div class="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div>
+                        <h3 class="text-base font-medium text-2xl">Solutions</h3>
+                        <ul role="list" class="mt-4 space-y-4">
+                            {{ footer:solutions }}
+                            <li>
+                                <a href="/services" class="text-base">{{ name }}</a>
+                            </li>
+                            {{ /footer:solutions }}
+                        </ul>
+                    </div>
+                    <div class="mt-12 md:mt-0">
+                        <h3 class="text-base font-medium text-2xl">Contact Us</h3>
+                        <ul role="list" class="mt-4 space-y-4">
+                            {{ footer:contact_us }}
+                            <li class="flex">
+                                    <span id="{{ name }}" class="flex-shrink-0">
+                                        {{ if svg }}{{ svg }}{{ /if }}
+                                    </span>
+
+                                {{ if name != "Call" }}
+                                    <span class="ml-3">
+                                        {{ if name == "RSS Feed" }}
+                                            <a href="/feed" target="_blank" class="inline-flex">
+                                                {{ name }}
+                                            </a>
+                                        {{ else }}
+                                            <a class="text-base" href="/contact-us">{{ name }}</a>
+                                        {{ /if }}
+                                    </span>
+                                {{ else }}
+                                {{ name }}
+                                {{ /if }}
+                            </li>
+                            {{ /footer:contact_us }}
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div>
+                        <h3 class="text-base font-medium text-2xl">Explore</h3>
+                        <ul role="list" class="mt-4 space-y-4">
+                            {{ footer:explore }}
+                            <li>
+                                <a href="{{ url }}" class="text-base">{{ name }}</a>
+                            </li>
+                            {{ /footer:explore }}
+                        </ul>
+                    </div>
+                    <div class="mt-12 md:mt-0">
+                        <h3 class="text-base font-medium text-2xl">Legal</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                {{ footer:legal }}
+                                    <li>
+                                        <a href="{{ url }}" class="text-base">{{ name }}</a>
+                                    </li>
+                                {{ /footer:legal }}
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 border-t border-gray-200 pt-8">
+            <p class="text-base xl:text-center">&copy; {{ now format="Y" }} {{ footer:copyright }} All rights reserved.</p>
+        </div>
+    </div>
+</footer>

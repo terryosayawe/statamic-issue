@@ -1,0 +1,30 @@
+{{ nocache }}
+    {{ form:contact_us files="true" class="w-full" }}
+
+        {{ partial:success }}
+
+        <div>
+            {{ fields }}
+            <div class="sm:col-span-2 {{ handle == 'inquiry' ? 'mb-0' : 'mb-2' }}">
+                <label for="{{ display }}" class="hidden text-sm font-medium text-gray-700">{{ display }}</label>
+                <div class="{{ handle == 'upload' ? 'mt-0 pt-0' : 'mt-3' }}">{{ field }}</div>
+                {{ if error }}
+                <p class="text-sm text-red-600">{{ error }}</p>
+                {{ /if }}
+            </div>
+            {{ /fields }}
+
+            <label>
+                <input type="text" class="hidden" name="{{ honeypot ?? 'oss_honeypot' }}">
+            </label>
+
+            <div class="sm:col-span-2 mt-4">
+                <button
+                    type="submit"
+                    class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex items-center justify-center rounded-md border border-transparent bg-pink-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2">
+                    Get in touch
+                </button>
+            </div>
+        </div>
+    {{ /form:contact_us }}
+{{ /nocache }}

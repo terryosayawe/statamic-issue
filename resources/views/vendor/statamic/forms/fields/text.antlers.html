@@ -1,0 +1,9 @@
+<input class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+    type="{{ input_type ?? 'text' }}"
+    name="{{ handle }}"
+    value="{{ old ?? default }}"
+    {{ if placeholder }}placeholder="{{ placeholder }}"{{ /if }}
+    {{ if character_limit }}maxlength="{{ character_limit }}"{{ /if }}
+    {{ if js_driver }}{{ js_attributes }}{{ /if }}
+    {{ if validate|contains:required }}required{{ /if }}
+>

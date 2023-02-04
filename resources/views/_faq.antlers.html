@@ -1,0 +1,44 @@
+{{ contactfaq:faqs }}
+<div class="bg-white">
+    <div class="mx-auto max-w-7xl py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+        <h2 class="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            {{ title }}
+        </h2>
+        <p class="text-center text-gray-500 pb-10 pt-6">{{ p1 }}</p>
+
+        <div class="divide-y-2 divide-gray-200">
+            <div></div>
+            <dl class="mt-6 space-y-6 divide-y divide-gray-200">
+                {{ items }}
+                <div class="pt-6" x-data="{ open: false }">
+                    <dt class="text-lg" >
+                        <!-- Expand/collapse question button -->
+                        <button @click="open = !open" type="button" class="flex w-full items-start justify-between text-left text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                            <span class="font-medium text-gray-900">{{ question }}</span>
+                            <span class="ml-6 flex h-7 items-center">
+                                        <svg x-show="open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+
+                                        <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </span>
+                        </button>
+                    </dt>
+                    <dd class="mt-2 pr-12" x-show="open">
+                        <p class="text-base text-gray-500">
+                            {{ answer }}
+                        </p>
+                    </dd>
+                </div>
+                {{ /items }}
+            </dl>
+        </div>
+        <div class="mt-8 mb-6 w-full h-0.5 bg-gray-200"></div>
+
+        <p class="text-lg text-pink-500 font-medium leading-6">{{ p2 }}</p>
+        <p class="text-base leading-6 text-gray-500">{{ p3 }}</p>
+    </div>
+</div>
+{{ /contactfaq:faqs }}

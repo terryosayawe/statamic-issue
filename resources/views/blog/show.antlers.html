@@ -1,0 +1,75 @@
+<div class="relative overflow-hidden bg-white py-8">
+    <div class="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full lg:[overflow-anchor:none]">
+        <div class="relative mx-auto h-full max-w-prose text-lg" aria-hidden="true">
+            <svg class="absolute top-12 left-full translate-x-32 transform" width="404" height="384" fill="none" viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="74b3fd99-0a6f-4271-bef2-e80eeafdf357" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)" />
+            </svg>
+            <svg class="absolute top-1/2 right-full -translate-y-1/2 -translate-x-32 transform" width="404" height="384" fill="none" viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
+            </svg>
+            <svg class="absolute bottom-12 left-full translate-x-32 transform" width="404" height="384" fill="none" viewBox="0 0 404 384">
+                <defs>
+                    <pattern id="d3eb07ae-5182-43e6-857d-35c643af9034" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#d3eb07ae-5182-43e6-857d-35c643af9034)" />
+            </svg>
+        </div>
+    </div>
+
+    <div class="relative px-4 sm:px-6 lg:px-4">
+        <header class="mx-auto max-w-prose text-lg">
+            {{ partial:breadcrum }}
+            <h1>
+                <span class="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">{{ title }}</span>
+            </h1>
+            <p class="mt-8 text-xl leading-8 text-gray-500">
+                {{ tags }}
+                  <a href="{{ url }}">
+                      <span class="inline-flex items-center rounded bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
+                        {{ svg src="images/tag" class="w-4 h-4 mr-1" }} {{ title }}
+                      </span>
+                  </a>
+                {{ /tags }}
+            </p>
+        </header>
+
+        <section class="prose prose-lg prose-indigo mx-auto mt-6 text-gray-500">
+            <figure class="mt-4">
+                <img class="transform rotate-2 rounded-lg" src='{{ glide:featured_image width="1800" height="1200" }}' alt="{{ featured_image.alt }}" />
+            </figure>
+
+            <article>
+                {{ content }}
+            </article>
+
+            <footer>
+                <p class="text-sm font-medium text-gray-900">
+                    Author: <a href="#">{{ author.name }}</a>
+                </p>
+                <div class="flex space-x-1 text-sm text-gray-500">
+                    <span>Updated: </span> <time datetime="2020-02-12">{{ updated_at }}</time>
+                    <span aria-hidden="true">&middot;</span>
+                    <span>{{ read_time }}</span>
+                </div>
+            </footer>
+
+            <p>Enjoyed this post? Never miss out on future posts by <a href="https://follow.it/10guru-blog-feed?pub" target="_blank">following us.»</a> </p>
+        </section>
+    </div>
+</div>
+
+{{ share_links }}
+
+
